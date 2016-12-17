@@ -1,0 +1,19 @@
+{
+  "name": "mentoring__react_redux_d3",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyssackwan/mentoring__react_redux_d3.git"
+  },
+  "author": "Alyssa Kwan <me@alyssackwan.name>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/alyssackwan/mentoring__react_redux_d3/issues"
+  },
+  "homepage": "https://github.com/alyssackwan/mentoring__react_redux_d3#readme"
+}
