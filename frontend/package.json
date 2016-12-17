@@ -1,18 +1,25 @@
 {
-  "name": "test",
-  "version": "0.1.0",
+  "name": "mentoring__react_redux_d3__frontend",
+  "version": "0.0.0",
   "private": true,
-  "devDependencies": {
-    "react-scripts": "0.8.4"
+  "author": "Alyssa Kwan <me@alyssackwan.name>",
+  "license": "Unlicense",
+  "homepage": "https://github.com/alyssackwan/mentoring__react_redux_d3#readme",
+  "bugs": {
+    "url": "https://github.com/alyssackwan/mentoring__react_redux_d3/issues"
   },
-  "dependencies": {
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
-  },
+  "repository": "alyssackwan/mentoring__react_redux_d3",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "react-scripts": "0.8.4"
   }
 }

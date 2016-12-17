@@ -1,22 +1,19 @@
 {
-  "name": "mentoring__react_redux_d3",
+  "name": "mentoring__react_redux_d3__backend",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
+  "author": "Alyssa Kwan <me@alyssackwan.name>",
+  "license": "Unlicense",
+  "homepage": "https://github.com/alyssackwan/mentoring__react_redux_d3#readme",
+  "bugs": {
+    "url": "https://github.com/alyssackwan/mentoring__react_redux_d3/issues"
+  },
+  "repository": "alyssackwan/mentoring__react_redux_d3",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive",
     "test:watch": "npm test -- --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alyssackwan/mentoring__react_redux_d3.git"
-  },
-  "author": "Alyssa Kwan <me@alyssackwan.name>",
-  "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/alyssackwan/mentoring__react_redux_d3/issues"
-  },
-  "homepage": "https://github.com/alyssackwan/mentoring__react_redux_d3#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
