@@ -1,6 +1,7 @@
 {
   "name": "mentoring__react_redux_d3__client",
   "version": "0.0.0",
+  "description": "",
   "private": true,
   "author": "Alyssa Kwan <me@alyssackwan.name>",
   "license": "Unlicense",
