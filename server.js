@@ -7,7 +7,7 @@ const port = process.env.PORT || 3001;
 expressWs(app);
 
 app.ws('/rsvps', (ws, req) => {
-  ws.on('message'; (message) => {
+  ws.on('message', (message) => {
     ws.send(message);
   });
 });
