@@ -2,15 +2,18 @@ import express from 'express';
 import expressWs from 'express-ws';
 
 const app = express();
+const wsInstance = expressWs(app);
 const port = process.env.PORT || 3001;
 
-expressWs(app);
+app.ws('/rsvps', (ws, req) => {});
+const rsvpsWs = wsInstance.getWss('/rsvps');
 
-app.ws('/rsvps', (ws, req) => {
-  ws.on('message', (message) => {
-    ws.send(message);
+const rsvpsInterval = 1000;
+setInterval(() => {
+  rsvpsWs.clients.forEach((client) => {
+    client.send('hello');
   });
-});
+}, rsvpsInterval);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}.`);
