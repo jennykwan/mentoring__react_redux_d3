@@ -29,5 +29,8 @@
     "presets": [
       "es2015"
     ]
+  },
+  "dependencies": {
+    "express-ws": "^2.0.0"
   }
 }

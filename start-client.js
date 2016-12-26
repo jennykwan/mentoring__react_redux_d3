@@ -5,5 +5,5 @@ const opts = {
   stdio: 'inherit',
   cwd: 'client',
   shell: true
-}
+};
 childProcess.spawn('npm', args, opts);
