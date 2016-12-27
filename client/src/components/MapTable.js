@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Table } from 'react-bootstrap';
 
 class MapTable extends Component {
   render() {
@@ -7,14 +8,14 @@ class MapTable extends Component {
         <tr><td>{key}</td><td>{value}</td></tr>
     );
     return (
-      <table>
+      <Table bordered hover>
         <thead>
           <tr><th>{this.props.keyHead}</th><th>{this.props.valueHead}</th></tr>
         </thead>
         <tbody>
           {rows}
         </tbody>
-      </table>
+      </Table>
     );
   }
 }
