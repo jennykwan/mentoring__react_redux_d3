@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducer from './reducers';
+import store from './services/store';
 import rsvps from './services/rsvps';
 import App from './App';
 import './index.css';
 
-const store = createStore(reducer);
+const storeInstance = store();
 
-rsvps(store);
+rsvps(storeInstance);
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={storeInstance}>
     <App />
   </Provider>,
   document.getElementById('root')
