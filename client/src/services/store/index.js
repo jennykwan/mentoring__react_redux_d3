@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 import reducer from './reducer';
 
 const initialState = Immutable.fromJS({
-  rsvps: []
+  rsvps: {}
 });
 
 export default () => {
