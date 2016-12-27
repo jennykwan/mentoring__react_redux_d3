@@ -17,6 +17,11 @@
     "test": "mocha --compilers js:babel-core/register --recursive",
     "test:watch": "npm test -- --watch"
   },
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-ws": "^2.0.0",
+    "request": "^2.79.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
@@ -29,9 +34,5 @@
     "presets": [
       "es2015"
     ]
-  },
-  "dependencies": {
-    "express": "^4.14.0",
-    "express-ws": "^2.0.0"
   }
 }

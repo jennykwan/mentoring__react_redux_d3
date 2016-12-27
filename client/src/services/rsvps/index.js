@@ -1,4 +1,4 @@
-import { addRsvp } from '../store/actions';
+import { addRsvpsData } from '../store/actions';
 
 export default (store) => {
   const protocol = (location.protocol === 'https:') ? 'wss:' : 'ws:';
@@ -6,6 +6,6 @@ export default (store) => {
 
   const ws = new WebSocket(url);
   ws.addEventListener('message', (message, flags) => {
-    store.dispatch(addRsvp(message.data));
+    store.dispatch(addRsvpsData(JSON.parse(message.data)));
   });
 };

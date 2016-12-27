@@ -1,8 +1,8 @@
 import * as actionTypes from './actionTypes';
 
-export const addRsvp = (data) => {
+export const addRsvpsData = (data) => {
   return {
-    type: actionTypes.ADD_RSVP,
+    type: actionTypes.ADD_RSVPS_DATA,
     data: data
   };
 };

@@ -5,7 +5,7 @@ const mapStateToProps = (state) => {
   return {
     keyHead: 'Word',
     valueHead: 'Count',
-    map: state.get('rsvps'),
+    map: state.get('rsvps').get('topics'),
     valueSortFn: (a, b) => {
       if (a > b)
         return -1;
