@@ -32,7 +32,7 @@ request
 app.ws('/rsvps', (ws, req) => {});
 const rsvpsWs = wsInstance.getWss('/rsvps');
 
-const rsvpsInterval = 1000;
+const rsvpsInterval = 250;
 setInterval(() => {
   rsvpsWs.clients.forEach((client) => {
     const topics = state.topics;
