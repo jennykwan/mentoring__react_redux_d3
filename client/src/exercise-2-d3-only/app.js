@@ -26,28 +26,13 @@ export default (rootId) => {
     .append('tbody');
 
   store((data) => {
-    const rawData = data.entrySeq().toArray().sort((x, y) => {
-      return (y[1] - x[1]) ? (y[1] - x[1]) : d3.ascending(x[0], y[0]);
-    });
+    /*
+    `data` is an Immutable.Map with the word/count entries
 
-    const limitedData = rawData.slice(0, 10);
-    limitedData.push(["<Other>", rawData.slice(10).reduce((accumulator, currentValue) => { return accumulator + currentValue[1]; }, 0)]);
-
-    const tableBodyData = tableBody
-      .selectAll('tr').data(limitedData, (element) => {
-        return element[0];
-      });
-
-    tableBodyData.exit().remove();
-
-    const tableBodyDataEnterRows = tableBodyData.enter().append('tr');
-    tableBodyDataEnterRows.append('td').classed('key', true).text((element) => { return element[0]; });
-    tableBodyDataEnterRows.append('td').classed('value', true);
-
-    const tableBodyDataCurrentRows = tableBodyDataEnterRows.merge(tableBodyData);
-    tableBodyDataCurrentRows.select('.value').text((element) => { return element[1]; });
-
-    tableBodyDataCurrentRows.order();
+    1. How do we get the top 10 entries?
+    2. How do we calculate the `<Other>` entry?
+    3. How do we update the `tableBody`?
+    */
   });
 
 };
