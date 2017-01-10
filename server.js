@@ -8,7 +8,8 @@ const wsInstance = expressWs(app);
 const port = process.env.PORT || 3001;
 
 const state = {
-  topics: {}
+  topics: {},
+  locations: []
 };
 
 request
@@ -25,6 +26,7 @@ request
         rsvp.group.group_topics.forEach((topic) => {
           state.topics[topic.topic_name] = (state.topics[topic.topic_name] || 0) + 1;
         });
+        state.locations.push([rsvp.group.group_lon, rsvp.group.group_lat]);
       });
     });
   });
@@ -34,11 +36,13 @@ const rsvpsWs = wsInstance.getWss('/rsvps');
 
 const rsvpsInterval = 1000;
 setInterval(() => {
-  const topics = state.topics;
+  const { topics, locations } = state;
   state.topics = {};
+  state.locations = [];
   rsvpsWs.clients.forEach((client) => {
     client.send(JSON.stringify({
-      topics: topics
+      topics: topics,
+      locations: locations
     }));
   });
 }, rsvpsInterval);

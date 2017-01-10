@@ -14,7 +14,7 @@ export default (rootId) => {
   const table = root
     .append('div').classed('row', true)
     .append('div').classed('col-xs-12', true)
-    .append('table').attr('id', `${rootId}-table`).classed('table', true).classed('table-bordered', true);
+    .append('table').attr('id', `${rootId}-table`).classed('table', true).classed('table-bordered', true).classed('table-hover', true);
 
   const tableHeaderRow = table
     .append('thead')
