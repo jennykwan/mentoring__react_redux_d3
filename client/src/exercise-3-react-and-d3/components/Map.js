@@ -5,9 +5,10 @@ import d3Map from '../d3-components/map';
 
 class Map extends Component {
   render() {
-    const root = ReactFauxDOM.createElement('svg');
-    d3Map(root, this.props.points);
-    return root.toReact();
+    /*
+    How to mount the D3 component and return it from this `render()` function?
+    */
+    return null;
   }
 }
 

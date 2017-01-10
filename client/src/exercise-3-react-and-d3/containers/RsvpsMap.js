@@ -3,7 +3,7 @@ import Map from '../components/Map';
 
 const mapStateToProps = (state) => {
   return {
-    points: state.getIn(['rsvps', 'locations'])
+    // points: ?
   };
 };
 
