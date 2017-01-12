@@ -11,6 +11,8 @@
 3. If necessary, open the workspace.
 4. Prepare the Cloud9 virtual machine.
     1. In the bash tab:
+        1. Execute `nvm install v7.4.0`
+        1. Execute `nvm alias default v7.4.0`
         1. Execute `npm install`.
         2. Execute `pushd client/ && npm install && popd`.
 
